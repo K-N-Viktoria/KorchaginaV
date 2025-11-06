@@ -1,0 +1,14 @@
+<h1>Отчет по лабораторной работе 1<h1>
+
+<h1>Основные этапы анализа<h1>
+
+1. Загрузка и первоначальный осмотр данных
+Проект начинается с загрузки CSV-файла  `````ncr_ride_bookings.csv`````  с обработкой возможных ошибок:
+`````try:
+    df = pd.read_csv("ncr_ride_bookings.csv")
+    print("Файл загружен успешно!")
+    print(f"Размер данных: {df.shape[0]} строк, {df.shape[1]} столбцов")
+except FileNotFoundError:
+    print("Файл 'ncr_ride_bookings.csv' не найден")
+    exit()`````
+
